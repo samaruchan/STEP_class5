@@ -5,7 +5,6 @@ import math
 import random, copy
 from common import format_tour, read_input, read_output
 #Simulated Annealing
-TEMPERATURE = 2500
 MAXITER = 20000
 ALPHA = 0.99
 #solve
