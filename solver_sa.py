@@ -119,7 +119,8 @@ def updated_best_tour(tour, score):
 def solve_by_2opt(tour, score, dist, N):
     best_tour = copy.deepcopy(tour)
     best_score = score
-
+    
+    #SA(2-opt)
     for iter in range(MAXITER):
         neighbor_tour, neighbor_score, is_updated = get_neighbor_tour_by_2opt(tour, score, dist, N)
         if is_updated:
@@ -136,6 +137,7 @@ def solve_by_3opt(tour, score, dist, N):
     best_tour = copy.deepcopy(tour)
     best_score = score
 
+    #SA(3-opt)
     for iter in range(MAXITER):
         neighbor_tour, neighbor_score, is_updated = get_neighbor_tour_by_3opt(tour, score, dist, N)
         if is_updated:
